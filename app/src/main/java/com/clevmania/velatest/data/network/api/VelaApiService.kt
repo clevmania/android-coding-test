@@ -1,4 +1,4 @@
-package com.clevmania.velatest.data.network
+package com.clevmania.velatest.data.network.api
 
 import com.clevmania.velatest.data.model.CommitResponse
 import com.clevmania.velatest.data.network.interceptor.ConnectivityInterceptor
