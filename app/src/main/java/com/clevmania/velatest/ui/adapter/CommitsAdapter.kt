@@ -1,4 +1,4 @@
-package com.clevmania.velatest.ui
+package com.clevmania.velatest.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View

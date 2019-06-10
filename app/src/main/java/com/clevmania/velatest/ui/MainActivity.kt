@@ -1,18 +1,18 @@
-package com.clevmania.velatest
+package com.clevmania.velatest.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.clevmania.velatest.R
 import com.clevmania.velatest.data.model.CommitModel
 import com.clevmania.velatest.data.network.VelaDataSourceImpl
 import com.clevmania.velatest.data.network.api.VelaApiService
 import com.clevmania.velatest.data.network.interceptor.ConnectivityInterceptorImpl
 import com.clevmania.velatest.data.repository.VelaRepositoryImpl
-import com.clevmania.velatest.ui.CommitsAdapter
+import com.clevmania.velatest.ui.adapter.CommitsAdapter
 import com.clevmania.velatest.viewmodel.VelaViewModel
 import com.clevmania.velatest.viewmodel.VelaViewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
