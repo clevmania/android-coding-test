@@ -1,6 +1,7 @@
 package com.clevmania.velatest.data.network
 
 import com.clevmania.velatest.data.model.CommitResponse
+import com.clevmania.velatest.data.network.interceptor.ConnectivityInterceptor
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import kotlinx.coroutines.Deferred
 import okhttp3.OkHttpClient
