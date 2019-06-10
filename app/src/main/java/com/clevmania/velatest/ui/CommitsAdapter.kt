@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.clevmania.velatest.R
+import com.clevmania.velatest.data.CommitModel
 import kotlinx.android.synthetic.main.item_commits.view.*
 
 class CommitsAdapter(private val commitList : List<CommitModel>): RecyclerView.Adapter<CommitsAdapter.ViewHolder>() {
@@ -23,8 +24,8 @@ class CommitsAdapter(private val commitList : List<CommitModel>): RecyclerView.A
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
         fun bindView(commits: CommitModel) {
-            itemView.tv_author_name .text = commits.name
-            itemView.tv_commit_id.text = commits.id
+            itemView.tv_author_name .text = commits.authorsName
+            itemView.tv_commit_id.text = commits.commitId
             itemView.tv_commit_message.text = commits.message
         }
     }
