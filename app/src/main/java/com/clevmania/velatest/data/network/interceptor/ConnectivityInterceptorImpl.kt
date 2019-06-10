@@ -2,6 +2,7 @@ package com.clevmania.velatest.data.network.interceptor
 
 import android.content.Context
 import android.net.ConnectivityManager
+import com.clevmania.velatest.data.network.exception.NoConnectivityException
 import okhttp3.Interceptor
 import okhttp3.Response
 
