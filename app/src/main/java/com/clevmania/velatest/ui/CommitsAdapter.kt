@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.clevmania.velatest.R
-import com.clevmania.velatest.data.CommitModel
+import com.clevmania.velatest.data.model.CommitModel
 import kotlinx.android.synthetic.main.item_commits.view.*
 
 class CommitsAdapter(private val commitList : List<CommitModel>): RecyclerView.Adapter<CommitsAdapter.ViewHolder>() {
