@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VelaTest</string>
+    <string name="fetching_commits">fetching commit messages</string>
 </resources>
