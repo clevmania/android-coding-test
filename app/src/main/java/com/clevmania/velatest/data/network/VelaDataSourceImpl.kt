@@ -13,15 +13,15 @@ import com.clevmania.velatest.data.network.exception.NoConnectivityException
 class VelaDataSourceImpl(private val velaApiService: VelaApiService,
                          private val context : Context
 ) : VelaDataSource {
-    private val _retrieveDevsCommits = MutableLiveData<CommitResponse>()
+    private val _retrieveDevsCommits = MutableLiveData<List<CommitResponse>>()
 
-    override val retrieveDevsCommits: LiveData<CommitResponse>
+    override val retrieveDevsCommits: LiveData<List<CommitResponse>>
         get() = _retrieveDevsCommits
 
     override suspend fun fetchDevelopersCommits(page: String, commitPerPage: String) {
-        val params = ParamsModel(page,commitPerPage)
+//        val params = ParamsModel(page,commitPerPage)
         try {
-            val commitRequest = velaApiService.fetchCommits(params).await()
+            val commitRequest = velaApiService.fetchCommits(page,commitPerPage).await()
             if(commitRequest.isSuccessful)
                 _retrieveDevsCommits.postValue(commitRequest.body())
         }catch (e: NoConnectivityException){

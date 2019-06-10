@@ -11,13 +11,17 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.Query
 import java.util.concurrent.TimeUnit
 
 const val baseUrl = "https://api.github.com/"
 
 interface VelaApiService {
-    @GET("repos/rails/rails/commits?page=1&per_page=25")
-    fun fetchCommits(@Body paramsModel: ParamsModel): Deferred<Response<CommitResponse>>
+    @GET("repos/rails/rails/commits")
+    fun fetchCommits(
+        @Query("page") page : String,
+        @Query("per_page") commitsPerPage : String
+    ): Deferred<Response<List<CommitResponse>>>
 
     companion object {
         operator fun invoke(connectivityInterceptor: ConnectivityInterceptor): VelaApiService {

@@ -19,7 +19,7 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/pb_sample_farmers"
+            android:id="@+id/pb_commit"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
@@ -30,5 +30,5 @@
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            tools:listitem="@layout/item_commits"/>
+            tools:listitem="@layout/item_commits" android:id="@+id/rv_commits"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
